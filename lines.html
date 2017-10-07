@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lines.css">
+    <title>Lines</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="wrapper">
+        <table>
+            <tr>
+                <td class="desc">Canvas width</td>
+                <td><input type="text" id="option1" value="640"></td>
+            </tr>
+            <tr>
+                <td class="desc">Line size</td>
+                <td><input type="text" id="option2" value="32"></td>
+            </tr>
+            <tr>
+                <td class="desc">Canvas height ratio</td>
+                <td><input type="text" id="option3" value="3"></td>
+            </tr>
+        </table>
+        <button id="button" onclick="Start();">Start</button>
+    </div>
+    <script src="lines.js"></script>
+</body>
+</html>
