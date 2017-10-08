@@ -1,5 +1,5 @@
 function clearCanvas() {
-    c.fillStyle = '#000';
+    c.fillStyle = background;
     c.fillRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -7,6 +7,8 @@ var canvas = document.getElementById('canvas'),
     c = canvas.getContext('2d'),
     size = Math.floor(document.getElementById('option2').value),
     ratio = Math.floor(document.getElementById('option3').value),
+    background = document.getElementById('option4').value,
+    color = document.getElementById('option5').value,
     button = document.getElementById('button');
 
 var x, y, sx = size, sy = sx;
@@ -18,6 +20,11 @@ canvas.height = canvas.width - sy * ratio;
 clearCanvas();
 
 function Start() {
+    size = Math.floor(document.getElementById('option2').value);
+    ratio = Math.floor(document.getElementById('option3').value);
+    background = document.getElementById('option4').value;
+    color = document.getElementById('option5').value;
+
     x = 0;
     y = 0;
     sx = size;
@@ -34,7 +41,7 @@ function Start() {
         if (!completed) {
             if (i % 2 != 0) {
                 c.beginPath();
-                c.strokeStyle = 'rgb(255, 255, 255)';
+                c.strokeStyle = color;
                 c.moveTo(x, y);
                 c.lineTo(x + sx, y + sy);
                 c.lineWidth = 1;
