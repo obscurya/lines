@@ -20,13 +20,13 @@ clearCanvas();
 function Start() {
     x = 0;
     y = 0;
-    sx = Math.floor(option2.value);
+    sx = size;
     sy = sx;
     completed = false;
     i = 1;
 
     canvas.width = Math.floor(document.getElementById('option1').value);
-    canvas.height = canvas.width - sy * Math.floor(option3.value);
+    canvas.height = canvas.width - sy * ratio;
 
     clearCanvas();
 
